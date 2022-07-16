@@ -29,15 +29,7 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AJ0-YU-479"/>
@@ -49,15 +41,7 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0jc-Dn-cvI"/>
@@ -69,15 +53,7 @@
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1m-uC-fA1"/>
@@ -89,15 +65,7 @@
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrO-Uq-Xro"/>
@@ -109,15 +77,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dH-Kb-uN7"/>
@@ -129,15 +89,7 @@
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="veI-Z9-qtP"/>
@@ -149,15 +101,7 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MW8-ZH-cBa"/>
@@ -170,7 +114,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="__">
+                                        <fragment content="s">
                                             <attributes>
                                                 <font key="NSFont" size="36" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -189,15 +133,7 @@
                                 <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.54570370629999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="__">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <attributedString key="attributedTitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="boardTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWd-1s-qCc"/>
