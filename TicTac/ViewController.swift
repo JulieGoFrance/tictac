@@ -8,6 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    enum Tour {
+        case Croix
+        case Rond
+    }
 
     @IBOutlet weak var turnLabel: UILabel!
     
@@ -24,6 +29,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var c2: UIButton!
     @IBOutlet weak var c3: UIButton!
     
+    var premierTour = Tour.Croix
+    var tourEnCours = Tour.Croix
+    let ROND = "X"
+    let CROIX = "O"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +41,23 @@ class ViewController: UIViewController {
 
     @IBAction func boardTapAction(_  sender: UIButton) {
          
+    }
+    func ajouterAuPlateau(_  sender: UIButton){
+        if (sender.title(for: .normal) == nil) {
+           
+            if (tourEnCours == Tour.Rond) {
+                sender.setTitle(ROND, for: .normal)
+                tourEnCours = Tour.Croix
+                turnLabel.text = CROIX
+                
+            }
+            if (tourEnCours == Tour.Croix) {
+                sender.setTitle(CROIX, for: .normal)
+                tourEnCours = Tour.Rond
+                turnLabel.text = ROND
+                
+            }
+        }
     }
     
 }
