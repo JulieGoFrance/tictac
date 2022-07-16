@@ -31,9 +31,9 @@ class ViewController: UIViewController {
     
     var premierTour = Tour.Croix
     var tourEnCours = Tour.Croix
-    let ROND = "X"
-    let CROIX = "O"
-    var plateau = [UIButton]()
+    var ROND = "X"
+    var CROIX = "O"
+    var board = [UIButton]()
     var scoreRond = 0
     var scoreCroix = 0
     
@@ -41,36 +41,64 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    func initialiserPlateau(){
-        plateau.append(a1)
-        plateau.append(a2)
-        plateau.append(a3)
-        plateau.append(b1)
-        plateau.append(b2)
-        plateau.append(b3)
-        plateau.append(c1)
-        plateau.append(c2)
-        plateau.append(c3)
-        
-    }
-   
-
+    
     @IBAction func boardTapAction(_  sender: UIButton) {
+      
+        addToBoard(sender)
+//        turnLabel.text = fullBoard()
         
-        ajouterAuPlateau(sender)
         if verifierVictoire(CROIX){
-            afficherResultats(titre: "Joueur 1 a gagné")
+            afficherResultats(title: "Joueur 1 a gagné")
             scoreRond += 1
         }
         if verifierVictoire(ROND){
-            afficherResultats(titre: "Joueur 2 a gagné")
+            afficherResultats(title: "Joueur 2 a gagné")
             scoreCroix += 1
         }
-        if (plateauPlein()){
-            afficherResultats(titre: "Commencer")
-        }
-    
+        fullBoard()
+//        if (fullBoard()){
+//
+//            afficherResultats(title: "Recommencer")
+//        }
+        
          
+    }
+    
+    func initialiserPlateau(){
+        board.append(a1)
+        board.append(a2)
+        board.append(a3)
+        board.append(b1)
+        board.append(b2)
+        board.append(b3)
+        board.append(c1)
+        board.append(c2)
+        board.append(c3)
+        
+    }
+    
+    
+    func addToBoard(_  sender: UIButton){
+        if (sender.title(for: .normal) == nil) {
+           
+            if (tourEnCours == Tour.Rond) {
+                sender.setTitle(ROND, for: .normal)
+                tourEnCours = Tour.Croix
+                turnLabel.text = CROIX
+                
+            }
+            else if (tourEnCours == Tour.Croix) {
+                sender.setTitle(CROIX, for: .normal)
+                tourEnCours = Tour.Rond
+                turnLabel.text = ROND
+                
+            }
+            sender.isEnabled = false
+        }
+    }
+    
+    func thisSymbol(_ button : UIButton, _ symbol : String) -> Bool{
+        return button.title(for: .normal) == symbol
     }
     
     func verifierVictoire(_ s : String)-> Bool {
@@ -108,53 +136,58 @@ class ViewController: UIViewController {
         
         return false
     }
-    func thisSymbol(_ button : UIButton, _ symbol : String) -> Bool{
-        return button.title(for: .normal) == symbol
-    }
     
-    func plateauPlein() -> Bool {
+
+    
+    func fullBoard()-> Bool
+    {
       
-        for button in plateau {
-            if button.title(for: .normal) == nil{
+        
+        for button in board
+        {
+            if button.title(for: .normal) == nil {
                 return false
+                
+              //  return false
             }
-            
         }
-       return true
-    }
-    func afficherResultats(titre : String){
+        return true
+ 
+      }
+    
+   
+    
+   
+    
+    func afficherResultats(title : String){
+        
+        
+        
         let message = "\n1 jouer " + String(scoreCroix) + "\n2 joueur " + String(scoreRond)
-        let ac = UIAlertController(title: titre, message: message, preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "Recommencer", style: .default, handler: {
-            (_)in self.ReinitPlateau()
-            
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Recommencer", style: .default, handler: { (_) in self.ReinitPlateau()
+
         }))
         self.present(ac, animated: true)
     }
+    
     func ReinitPlateau() {
-        for button in plateau {
+        for button in board {
             button.setTitle(nil, for: .normal)
             button.isEnabled = true
         }
-    }
-    func ajouterAuPlateau(_  sender: UIButton){
-        if (sender.title(for: .normal) == nil) {
-           
-            if (tourEnCours == Tour.Rond) {
-                sender.setTitle(ROND, for: .normal)
-                tourEnCours = Tour.Croix
-                turnLabel.text = CROIX
-                
-            }
-            else if (tourEnCours == Tour.Croix) {
-                sender.setTitle(CROIX, for: .normal)
-                tourEnCours = Tour.Rond
-                turnLabel.text = ROND
-                
-            }
-            sender.isEnabled = false
+        if ( tourEnCours == Tour.Rond){
+            tourEnCours = Tour.Croix
+            turnLabel.text = "CROIX"
         }
+        else if ( tourEnCours == Tour.Croix){
+            tourEnCours = Tour.Rond
+            turnLabel.text = "ROND"
+        }
+    
+        tourEnCours = premierTour
     }
+
     
 }
 
