@@ -42,27 +42,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     @IBAction func boardTapAction(_  sender: UIButton) {
-      
-        addToBoard(sender)
+      addToBoard(sender)
 
         if verifierVictoire(CROIX){
-            afficherResultats(title: "Player 1 win")
+            afficherResultats(title: "Bravo joueur 1 !")
             scoreRond += 1
         }
         if verifierVictoire(ROND){
-            afficherResultats(title: "Player 2 win")
+            afficherResultats(title: "Bravo joueur 2 !")
             scoreCroix += 1
         }
         
         if (fullBoard()){
 
-            afficherResultats(title: "Recommencer")
+            afficherResultats(title: " Match Nul !")
         }
-        
     }
     
     func addToBoard(_  sender: UIButton){
@@ -80,7 +77,7 @@ class ViewController: UIViewController {
                 
             }
             sender.isEnabled = false
-        }
+}
     }
     
     func initBoard(){
@@ -93,21 +90,17 @@ class ViewController: UIViewController {
         board.append(c1)
         board.append(c2)
         board.append(c3)
-        
     }
     
  
     
     func fullBoard()-> Bool {
        
-        if a1.title(for: .normal) != nil && a2.title(for: .normal) != nil && a3.title(for: .normal) != nil && b1.title(for: .normal) != nil && b2.title(for: .normal) != nil && b3.title(for: .normal) != nil && c1.title(for: .normal) != nil && c2.title(for: .normal) != nil && c3.title(for: .normal) != nil{
+        if a1.title(for: .normal) != nil && a2.title(for: .normal) != nil && a3.title(for: .normal) != nil && b1.title(for: .normal) != nil && b2.title(for: .normal) != nil && b3.title(for: .normal) != nil && c1.title(for: .normal) != nil && c2.title(for: .normal) != nil && c3.title(for: .normal) != nil {
             return true
-        }
-
-        
-      return false
- 
-      }
+            }
+            return false
+    }
 
     
     
@@ -183,7 +176,7 @@ class ViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Recommencer", style: .default, handler: { (_) in self.ReinitPlateau()
             }))
         self.present(ac, animated: true)
-    }
+        }
     
     
   
